@@ -1,0 +1,186 @@
+header{
+    font-size:14px;
+    border-bottom:2px solid #393;
+    .top {
+        height:36px;
+        line-height: 36px;
+        border:1px solid #ddd;
+        .mid{
+            width:85%;
+            margin:0 auto;
+            .fl{
+                float: left;
+            }
+            .fr{
+                float: right;
+                display: block;
+            }
+            .user{
+                display: block;
+                float:right;
+                a{
+                    color:red;
+                    text-decoration: none;
+                
+                }
+                b{
+                    margin:10px auto;
+                    color:#ccc;
+                }
+            }
+        }
+        
+    }
+
+
+    .hmid{
+        width: 85%;
+        margin:0 auto;
+        min-width: 1024px;
+        max-width: 1440px;
+        .logo{
+            text-indent: -999999px;
+            display: inline-block;
+            padding:15px 8px;
+            img{
+                display: block;
+            }
+        }
+        .cart{
+            position: relative;
+            margin: 37px 0 0 0;
+            color: #333;
+            border: 1px solid #DFDFDF;
+            padding: 0 10px;
+            background: #F9F9F9;
+            text-align: center;
+            line-height: 34px;
+            a{
+                text-decoration: none;
+                color:#333;
+                b{
+                    background: #DF4E4F;
+                    color: #fff;
+                    position: absolute;
+                    top: -5px;
+                    line-height: 18px;
+                    border-radius: 50%;
+                    display: block;
+                    font-size: 13px;
+                    padding: 0 5px;
+                    font-weight: normal;
+                    right: 30px;
+                }
+            }
+
+        }
+        .suggest{
+            width:224px;
+            display: flex;
+            position: absolute;
+            top:110px;
+            right:223px;
+            bottom: 0;
+            z-index: 100;
+            ul{
+                width:200px;
+            }
+        }
+        .fr{
+            float:right;
+        }
+        .s{
+            float:right;
+            border:1px solid #393;
+            height:32px;
+            margin:37px 30px 0 0;
+            input{
+                vertical-align: middle;
+            }
+            .kw{
+                background:#fff;
+                padding:0 5px;
+                height:30px;
+                line-height:30px;
+                width:160px;
+                border:none;
+                font-size:14px;
+            }
+            .go{
+                background:#393;
+                border:none;
+                height:32px;
+                line-height:33px;
+                color:#fff;
+                font-size:14px;
+                display:inline-block;
+                cursor: pointer;
+                padding:0 10px;
+            }
+
+        }
+        .ads{
+            width:340px;
+            height:34px;
+            float:right;
+            margin:37px 30px 0 0;
+        }
+        .clear{
+            clear: both;
+        }
+        #cat{
+            float:left;
+            position:relative;
+            width:200px;
+            cursor: pointer;
+            h3{
+                height:36px;
+                line-height:36px;
+                color:#fff;
+                background:#393;
+                font-size:15px;
+            }
+            .menu{
+                position: absolute;
+                background:rgba(153,204,0,0.85);
+                width:200px;
+                height:450px;
+                z-index:999;
+                border-top:2px solid #393;
+                overflow: hidden;
+                li{
+                    border-bottom: 1px solid #cbde8c;
+                    a{
+                        color:#fff;
+                        height:36px;
+                        line-height:36px;
+                        font-size:14px;
+                        padding:0 10px;
+                    }
+                }
+            }
+        }
+        nav{
+            float:left;
+            ul{
+                display: block;
+                li{
+                    float: left;
+                    margin:0 0 0 1px;
+                    a{
+                        display: block;
+                        height:36px;
+                        padding:0 15px;
+                        text-align: center;
+                        font-size:16px;
+                        font-weight: bold;
+                        color:#333;
+                    }
+                    #home{
+                        padding:0 30px;
+                    }
+                }
+            }
+        }
+    }
+}

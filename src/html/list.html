@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/list.css">
+</head>
+<body>
+    <div id="header-container"></div>
+    <section class="midd">
+            <div id="here">
+                <a href=".">首页</a> <code>&gt;</code> <a href="category.php?id=6">进口鲜果</a>
+            </div>
+            <div id="filter">
+                <span>产地：</span>
+                <a class="all">全部</a>
+                <a href="javascript:;">智利</a>
+                <a href="javascript:;">美国/秘鲁</a>
+                <a href="javascript:;">美国</a>
+                <a href="javascript:;">智利/美国</a>
+                <a href="javascript:;">台湾</a>
+                <a href="javascript:;">泰国</a>
+                <a href="javascript:;">越南</a>
+                <a href="javascript:;">南非</a>
+                <a href="javascript:;">澳大利亚</a>
+            </div>
+            <div id="sort">
+                <a href="javascript:;">更新时间</a>
+                <a href="javascript:;" id="priceAD">价格</a>
+                <a href="javascript:;">上架时间</a>
+            </div>
+            <!-- 商品列表div -->
+            <div class="cart_goods">
+                <div class="clo_12" id="category">
+
+                </div>
+            </div>
+    </section>
+    <div id="footer-container"></div>
+    <!-- <script type="text/html" id="list-template">
+        <ul>
+            {{each list item}}
+            <li>
+                <a href="/html/detail.html">
+                <img src="{{item.img}}" alt=""/>
+                <p class="text">{{item.title}}</p>
+                </a>
+                <p class="cle">
+                    <span class="price">￥{{item.price}}</span>
+                    <span class="orginPrice">￥{{item.orginPrice}}</span><br/>
+                    <span class="action"><em>{{item.people}}</em><a href="javascript:;">加入购物车</a><span>
+                </p>
+            </li>
+            {{/each}}
+        </ul>
+    </script> -->
+    <script type="text/javascript" src="/libs/requirejs/require.js" data-main="/js/list.js"></script>  
+</body>
+</html>

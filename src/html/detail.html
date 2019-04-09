@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/detail.css">
+    <title>详情</title>
+</head>
+<body>
+    <div id="header-container"></div>
+    <section class="center">
+        <div id="here">
+            <a href="javascript:;">首页</a>
+            <code>&gt;</code>
+            国产鲜果
+        </div>
+        <div class="goods"  id="catyList">
+                <!-- <div class="goods_img">
+                        <div id="mid_img">
+                            <img class="zoom-img" src="/images/817_thumb_G_1550472686902.jpg" data-zoom-image="images/817_thumb_G_1550472686902.jpg"/>
+                        </div>
+                        <div id="gallery" class="moveable">
+                                <ul>
+                                    <li class="current">
+                                        <a href="#" data-image="/images/817_thumb_G_1550472686902.jpg" data-zoom-image="/images/817_thumb_G_1550472686902.jpg"/>
+                                        <img class="s" src="/images/817_thumb_G_1550472686902.jpg" />
+                                    </li>
+                                    <li>
+                                            <a href="#" data-image="/images/729_thumb_G_1537349021148.jpg" data-zoom-image="/images/729_thumb_G_1537349021148.jpg"/>
+                                        <img class="s" src="/images/729_thumb_G_1537349021148.jpg"/>
+                                    </li>
+                                </ul>
+                        </div>
+                    </div>
+                    <div class="goods_info">
+                         <h2 class="goods_name">智利进口无籽黑提 【9斤家庭装】</h2>
+                         <div class="price_box">
+                             <p class="desc">口感浓烈，够甜，够劲，不涩</p>
+                             <p class="fr">51人已购买</p>
+                             <p>本店售价<b> ￥240.00</b></p>
+                             <p>市场价格<del> ￥280.00</del></p>
+                         </div>
+                         <li>商品货号： 10008</li>
+                         <li>商品库存：947件</li>
+                         <li>商品重量： 4.500千克</li>
+                         <li> 产  地： 智利 </li>
+                         <li>用户评价：</li>
+                             <div class="act">
+                                 <div class="quantity">
+                                     <input type="button" class="minus" value="-">
+                                     <input name="number" type="text" id="number" class="cart_quantity" value="1" size="4" minnum="1">
+                                     <input type="button" class="plus" value="+">
+                                 </div>
+                                     <a class="cart_btn" href="/html/cart.html?id={{id}}">加入购物车</a>        
+                                     <span class="fr">
+                                         <a href="javascript:collect(231)">收藏</a>
+                                         <a href="JavaScript:;">推荐</a>
+                                     </span>
+                             </div>
+                         <div class="clear"></div>
+                     </div> -->
+           
+        </div>
+
+        
+         <p class="clear"></p>
+    </section>
+    <div id="footer-container"></div>
+
+
+    <script type="text/html" id="list-template"> 
+        <div class="goods_img">
+            <div id="mid_img">
+                <img class="zoom-img" src="{{img}}" data-zoom-image="{{bimg}}"/>
+            </div>
+            <div id="gallery" class="moveable">
+                    <ul>
+                        <li class="current">
+                            <a href="#" data-image="{{img}}" data-zoom-image="{{bimg}}">
+                            <img class="s" src="{{simg}}" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-image="{{img}}" data-zoom-image="{{bimg}}">
+                            <img class="s" src="{{simg}}"/>
+                            </a>
+                        </li>
+                    </ul>
+            </div>     
+        </div>
+            <div class="goods_info">
+                 <h2 class="goods_name">{{title}}</h2>
+                 <div class="price_box">
+                     <p class="desc">{{message}}</p>
+                     <p class="fr">{{people}} </p>
+                     <p>本店售价<b> ￥{{price}}</b></p>
+                     <p>市场价格<del>￥{{orginPrice}}</del></p>
+                 </div>
+                 <li>商品货号： {{hnum}}</li>
+                 <li>商品库存：{{cnum}}件</li>
+                 <li>商品重量： {{weight}}千克</li>
+                 <li> 产  地： {{loca}} </li>
+                 <li>用户评价：</li>
+                     <div class="act">
+                         <div class="quantity">
+                             <input type="button" class="minus" value="-">
+                             <input name="number" type="text" id="number" class="cart_quantity" value="1" size="4" minnum="1">
+                             <input type="button" class="plus" value="+">
+                         </div>
+                             <a class="cart_btn" href="/html/cart.html?id={{id}}">加入购物车</a>        
+                             <span class="fr">
+                                 <a href="javascript:collect(231)">收藏</a>
+                                 <a href="JavaScript:;">推荐</a>
+                             </span>
+                     </div>
+                 <div class="clear"></div>
+             </div>
+    </script>
+    <script type="text/javascript" src="/libs/requirejs/require.js" data-main="/js/detail.js"></script>  
+</body>
+</html>

@@ -1,0 +1,80 @@
+@import "style";
+@import "module/header";
+@import "module/footer";
+.mid{
+    font-size:14px;
+    width:85%;
+    margin:0 auto;
+    min-width: 1024px;
+    max-width: 1440px;
+    overflow: hidden;
+    #here{
+        margin:15px 0;
+        a{
+            color: #333;
+        }
+        code{
+            margin:0 10px;
+        }
+    }
+    .login{
+        width:400px;
+        min-height:250px;
+        margin: 0 0 50px 0;
+        float:right;
+        padding:20px 40px;
+        border:1px solid #ddd;
+        a{
+            font-weight: normal;
+            color: #DF4E4F;
+        }
+        h3{
+            margin: 0 0 20px 0;
+            .fr{
+                float: right;
+            }
+        }
+        input[type="text"]{
+            width:200px;
+        }
+        input[type="password"]{
+            width:200px;
+        }
+        input{
+            margin:10px 0;
+        }
+        .input_text{
+            line-height:22px;
+            height:22px;
+            border:1px solid #ddd;
+            padding:0 3px;
+        }
+        span{
+            display: none;
+            font-size:10px;
+            color:#c00;
+        }
+        #btn{
+            line-height:24px;
+            cursor: pointer;
+            height:24px;
+            border:none;
+            text-align: center;
+            background:#DF4E4F;
+            color:#fff;
+            padding:0 10px;
+        }
+    }
+    .login_ad{
+        margin:0 550px 0 0;
+        img{          
+            max-width: 100%;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+
+}
+.menu{
+    display: none;
+}

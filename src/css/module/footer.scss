@@ -1,0 +1,68 @@
+footer {
+    font-size:14px;
+    margin:20px 0 0 0;
+    .slogen{
+        margin:20px 0;
+        text-align: center;
+        background: #e4e4e4;
+        overflow: hidden;         
+        li{
+            width:25%;
+            float:left;
+            position: relative;
+            margin:30px 0;
+            overflow: hidden;
+        } 
+    }  
+    .mid{
+        width:85%;
+        margin:0 auto;
+        min-width: 1024px;
+        max-width: 1440px;
+        .help{
+            overflow: hidden;
+            bottom:1px solid #ddd;
+            padding: 0 0 20px 0;
+            a{
+                color:#333;
+            }
+            li{
+                width:20%;
+                float:left;
+                h4{
+                    font-size:14px;
+                    margin: 0 0 5px 0;
+                }
+                ul{
+                    li{
+                        width:100%;
+                    }
+                }
+            }
+
+        }
+        .copyright{
+            overflow: hidden;
+            font-size:12px;
+            color:#666;
+            .fr{
+                float:right;
+            }
+            .fl{
+                float:left;
+                a{
+                    color:red;
+                }
+            }
+        }
+        div{
+            p{
+                margin:15px 0;
+                a{
+                    color:red;
+                }
+            }
+        }
+}
+ 
+} 

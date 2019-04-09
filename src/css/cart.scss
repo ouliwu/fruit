@@ -1,0 +1,126 @@
+@import "style";
+@import "module/header";
+@import "module/footer";
+.menu{
+    display: none;
+}
+.mid{
+    margin: 0 auto;
+    width: 85%;
+    min-width: 1024px;
+    max-width: 1440px;
+    #here{
+        a{
+            color:#333;
+        }
+        margin:15px 0;
+        code{
+            margin: 0 10px;
+        }
+    }
+    .step{
+        a{
+            color:#333;
+        }
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 0 0 10px 0;
+        .on{
+            color: #fff;
+            background: #efac0b;
+        }
+        b{
+            width:9%;
+            font-size:24px;
+            color:#888;
+        }
+    }
+    .flow{
+        margin:15px 0;
+        table{
+            font-size:14px;
+            border-collapse: collapse;
+            border-spacing: 0;
+            width:100%;
+            background:#fff;
+            th{
+                background:#e8e8e8;
+                line-height:30px;
+                border-top:1px solid #ddd;
+                border-bottom:1px solid #ddd;
+            }
+            td{
+                line-height:30px;
+                border:none;
+                padding:5px 15px;
+                border-bottom:1px solid #ddd;
+                .cart-goods{
+
+                    overflow: hidden;
+                    vertical-align: top;
+                    img{
+                        width:100px;
+                        height:100px;
+                        float:left;
+                        margin: 0 15px 0 5px;
+                        padding:1px;
+                        border:1px solid #ddd;
+                    }
+                    a{
+                        color:#333;
+                    }
+                }
+                .quantity input{
+                    float: left;
+                    cursor: pointer;
+                    color: #666;
+                    line-height: 30px;
+                    font-size: 16px;
+                    text-align: center;
+                    width: 30px;
+                    background: #fff;
+                    border: 1px solid #ddd;
+                    background-color: #fff;
+                }
+            }
+            .total{
+                margin:15px;
+            }
+            .btn{
+                line-height:24px;
+                cursor: pointer;
+                padding:0 5px;
+                display: inline-block;
+            }
+            .white{
+                color:#333;
+                background:#fff;
+            }
+            .red{
+                background:#df4e4f;
+                color:#fff;
+                border:none;
+            }
+           
+        }
+    }
+    
+       
+        .operation {
+            margin:15px 0;
+            a{
+            font-size:1.2em;
+            line-height:36px;
+            background:#df4e4f;
+            color:#fff;
+            padding:0 15px;
+            display:inline-block;
+            }
+            .fr{
+                float:right;
+            }
+        }
+   
+    
+
+}

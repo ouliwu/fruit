@@ -1,0 +1,15 @@
+@import "style";
+@import "module/header";
+@import "module/footer";
+@import "module/shopItem";
+.midd{
+    overflow: hidden;
+    width:85%;
+    margin:0 auto;
+    min-width: 1024px;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}

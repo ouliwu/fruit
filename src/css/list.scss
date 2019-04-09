@@ -1,0 +1,46 @@
+@import "style";
+@import "module/header";
+@import "module/footer";
+@import "module/shopItem";
+.menu{
+    display: none;
+}
+.midd{
+    overflow: hidden;
+    margin: 0 auto;
+    width: 85%;
+    min-width: 1024px;
+    max-width: 1440px;
+    a{
+        color:#333;
+    }
+    #here{
+        margin:15px 0;
+       
+    }
+    #filter{
+        background:#fff;
+        margin:15px;
+        a{
+            padding:3px 10px;
+        }
+        .all{
+            background:#ddd;
+        }
+    }
+    #sort{
+        border:1px solid #ddd;
+        background:#e4e4e4;
+        padding:10px;
+        margin:15px 0;
+        a{
+            background:#fff;
+            padding:0 10px;
+            line-height:24px;
+            display: inline-block;
+            border:1px solid #ccc;
+        }
+       
+
+    }
+}

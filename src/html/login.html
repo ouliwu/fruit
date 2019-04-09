@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <script src="/libs/tools.js"></script>
+</head>
+<body>
+    <div id="header-container"></div>
+    <section class="mid">
+        <div id="here">
+            <a href="javascript:;">首页</a>
+            <code>></code>
+            用户中心
+        </div>
+        <div class="login">
+            <form>
+                <h3>用户登录<a class="fr" href="javascript:;">注册新用户</a></h3>
+                <input type="text" name="username" class="text_input" placeholder="用户名/邮箱/手机号"><br/>
+                <input type="password" name="password" class="text_input" placeholder="密码"/><br/>
+                <input type="checkbox" value="1" name="remember" id="remember"/><label for="remember">请保存我这次的登录信息</label><br/>
+                <input type="hidden" name="act" value="act_login"/>
+                <input type="hidden" name="back_act" value="./index.php">
+                <button class="red_btn" id="btn">登录</button><br/>
+                <p>
+                    <a href="user.php?act=qpassword_name" class="f3">密码问题找回密码</a>|
+                    <a href="user.php?act=get_password" class="f3">注册邮件找回密码</a>
+                </p>
+            </form>
+        </div>
+        <div class="login_ad">
+                <img src="/images/login.jpg">
+         </div>
+         <p class="clear"></p>
+    </section>
+    <div id="footer-container"></div>
+    <script type="text/javascript" src="/libs/requirejs/require.js" data-main="/js/login.js"></script>  
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<script type="text/html" id="shop-list">
+    <ul>
+        {{each list item}}
+        <li>
+            <a href="/html/detail.html?id={{item.id}}">
+            <img src="{{item.img}}" alt=""/>
+            <p class="text">{{item.title}}</p>
+            </a>
+            <p class="cle">
+                <span class="price">￥{{item.price}}</span>
+                <span class="orginPrice">￥{{item.orginPrice}}</span><br/>
+                <span class="action"><em>{{item.people}}</em><a href="/html/cart.html?id={{item.id}}">加入购物车</a><span>
+            </p>
+        </li>
+        {{/each}}
+    </ul>
+</script>
