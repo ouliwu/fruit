@@ -1,8 +1,8 @@
 <?php 
+	header("Access-Control-Allow-Origin:*");
 	include("db.php");
 	$username = $_POST["username"];
 	$password = $_POST["password"];
-
 	$sql = "select * from users where username='$username' and password='$password'";
 
 	$res = mysql_query($sql);

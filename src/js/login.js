@@ -1,34 +1,32 @@
 require(["require.config"],function(){
-    require(["jquery","header","footer"],function($){
+    require(["jquery","url","tools","header","footer"],function($,url){
         class Login{
             constructor(){
-
+                this.init();
             }
             init(){
-                this.user = $("username");
-                this.pwd = $("password");
-                this.rem = $("remember");
+                this.bindEvents();
             }
 
-            bindEvents(){
-                $("btn").onclick(function(){
-                    username = this.user.value;
-                    password = this.pwd.value;
-                    
-                    tools.ajaxPost("/api/login.php",{username,password},function(res){
-                        
-                        var option = remember.checked? {"path":"/",expires:10} : {"path":"/"};
+            bindEvents(){ 
+                $("#btn").on("click",function(){
+                    let username = $(".usern").val();
+                    let password = $(".pwd").val();
+                    tools.ajaxPost(url.phpUrl+"api/login.php",{username,password},function(res){
+                        var option = $("remember").checked? {"path":"/",expires:10} : {"path":"/"};
                         
                         tools.cookie("username",username,option);
-                        
-                        if(confirm(res.res_message + "，即将跳转首页")){
-                            location.href = "/index.html";
-                        }else{
+                        if(res.res_code===1){
+                            if(confirm(res.res_message + "，即将跳转首页")){
+                                location.href = "/index.html";
+                            }
+                        }
+                        else{
                             alert(res.res_message);
                         }
                         
                     });
-                    return false;
+                   
                 })
             }
         }

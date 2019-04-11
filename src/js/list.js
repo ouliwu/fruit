@@ -1,9 +1,10 @@
 require(["require.config"],function(){
-    require(["jquery","header","url","shopItem","template","footer"],function($,header,url,shopItem,template,footer){
+    require(["jquery","header","url","shopItem","template","addCart","footer"],function($,header,url,shopItem,template,addCart,footer){
         class List{
             constructor(){
                 this.caty();
                 this.prcieAD();
+                this.toCart();
             }
           
             caty(){
@@ -46,6 +47,9 @@ require(["require.config"],function(){
                         new shopItem($(".clo_12"),"",list);
                     })
                 })
+            }
+            toCart(){
+                addCart($(".cart_goods"),".cart_btn","",true);
             }
         }
         new List();

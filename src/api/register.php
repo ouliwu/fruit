@@ -1,4 +1,5 @@
 <?php
+	header("Access-Control-Allow-Origin:*");
 	include("db.php");
 	$username = $_POST["username"];
 	$password = $_POST["password"];

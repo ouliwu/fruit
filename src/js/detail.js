@@ -1,12 +1,14 @@
 require(["require.config"],function(){
-    require(["jquery","header","url","template","footer","zoom"],function($,header,url,template,footer){
+    require(["jquery","header","url","template","footer","addCart","zoom"],function($,header,url,template,footer,addCart){
         class Detail{
             constructor(){
                 this.init().then((res)=>{
                     this.load(res);
                     this.bindEvents();
+                    this.zoom();
+                    this.toCart();
                 });
-                this.zoom();
+                
             }
             init(){
                this.id = location.search.slice(4);
@@ -18,6 +20,7 @@ require(["require.config"],function(){
                 small = url.baseUrl+"caty";
                 
                 }
+               
                return new Promise(resolve=>{
                     $.get(small,(res)=>{
                         resolve(res);
@@ -37,11 +40,20 @@ require(["require.config"],function(){
                      return item.id == this.id;
                     })){
                          str = list[i];
+                         this.detail = {
+                             id : list[i].id,
+                             title : list[i].title,
+                             price : list[i].price,
+                             img : list[i].bimg,
+                             orginPrice : list[i].orginPrice,
+                             num : 1
+                         }
                     }
                     var html = template("list-template",{...str});
+                
                     
                     $("#catyList").html(html);
-                    
+                   
                 }
             }
 
@@ -76,7 +88,38 @@ require(["require.config"],function(){
                     }
                     $(".minus").parent().children(".cart_quantity").val(i);
                 })
+               
+                // $(".cart_btn").on("click",()=>{
+                //     let num = $(".cart_quantity").val();
+                //     // console.log(num)
+                //     let id = this.obj.id;
+                //     let n = 0;
+                //     this.arr = [] ;
+                //     if(localStorage.getItem("cart")){
+                //         this.arr = JSON.parse(localStorage.getItem("cart"));
+                //          if(this.arr.some(function(item,index){
+                //              n = index;
+                //             return id == item.id;       
+                //          })){
+                //             this.arr[n].num = num;
+                //          }else{
+                //             this.arr.push(this.obj);
+                //          }
+                //     }else{
+                //         this.obj.num = num;
+                //         this.arr = [this.obj] ;
+                       
+                //     }
+                //     localStorage.setItem("cart",JSON.stringify(this.arr));
+                   
+                    
+                    
+                // })
+            
             }
+            toCart () {
+                addCart($(".goods_info"), ".cart_btn", this.detail);
+              }
 
         }
            

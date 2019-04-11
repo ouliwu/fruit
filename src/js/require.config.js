@@ -14,13 +14,18 @@ require.config({
         "shopItem" : "js/module/shopItem",
         "cart" : "js/cart",
         "tools" : "libs/tools",
-        "zoom" : "libs/jquery-plugins/jquery.elevateZoom-3.0.8.min"
+        "zoom" : "libs/jquery-plugins/jquery.elevateZoom-3.0.8.min",
+        "fly" :"libs/jquery-plugins/jquery.fly.min",
+        "addCart" :"js/module/addCartNum"
         
     },
     //垫片不满足AMD规范，但又依赖于其他的模块
     shim:{
         "zoom":{
            deps:["jquery"] 
-        }
+        },
+        "fly" : {
+			deps : ["jquery"]
+		}
     }
 })

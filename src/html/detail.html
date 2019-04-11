@@ -71,19 +71,19 @@
 
     <script type="text/html" id="list-template"> 
         <div class="goods_img">
-            <div id="mid_img">
-                <img class="zoom-img" src="{{img}}" data-zoom-image="{{bimg}}"/>
+            <div id="mid_img view_bd">
+                <img class="zoom-img" src="{{img[0]}}" data-zoom-image="{{bimg}}"/>
             </div>
-            <div id="gallery" class="moveable">
-                    <ul>
+            <div id="gallery" class="moveable view_thumbs">
+                    <ul class="view_ul">
                         <li class="current">
-                            <a href="#" data-image="{{img}}" data-zoom-image="{{bimg}}">
-                            <img class="s" src="{{simg}}" />
+                            <a href="#" data-image="{{img[0]}}" data-zoom-image="{{bimg}}">
+                            <img class="s" src="{{simg[0]}}" />
                             </a>
                         </li>
                         <li>
-                            <a href="#" data-image="{{img}}" data-zoom-image="{{bimg}}">
-                            <img class="s" src="{{simg}}"/>
+                            <a href="#" data-image="{{img[1]}}" data-zoom-image="{{bimg}}">
+                            <img class="s" src="{{simg[1]}}"/>
                             </a>
                         </li>
                     </ul>
@@ -94,8 +94,8 @@
                  <div class="price_box">
                      <p class="desc">{{message}}</p>
                      <p class="fr">{{people}} </p>
-                     <p>本店售价<b> ￥{{price}}</b></p>
-                     <p>市场价格<del>￥{{orginPrice}}</del></p>
+                     <p>本店售价￥<b class="price"> {{price}}</b></p>
+                     <p>市场价格￥<del class="orginPrice">{{orginPrice}}</del></p>
                  </div>
                  <li>商品货号： {{hnum}}</li>
                  <li>商品库存：{{cnum}}件</li>
@@ -108,7 +108,7 @@
                              <input name="number" type="text" id="number" class="cart_quantity" value="1" size="4" minnum="1">
                              <input type="button" class="plus" value="+">
                          </div>
-                             <a class="cart_btn" href="/html/cart.html?id={{id}}">加入购物车</a>        
+                             <a class="cart_btn" data-id="{{id}}">加入购物车</a>        
                              <span class="fr">
                                  <a href="javascript:collect(231)">收藏</a>
                                  <a href="JavaScript:;">推荐</a>

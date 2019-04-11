@@ -69,7 +69,7 @@ header{
                     font-size: 13px;
                     padding: 0 5px;
                     font-weight: normal;
-                    right: 30px;
+                    right: 0px;
                 }
             }
 
@@ -148,6 +148,9 @@ header{
                 z-index:999;
                 border-top:2px solid #393;
                 overflow: hidden;
+                li:hover{
+                    background:#5fae2c;
+                }
                 li{
                     border-bottom: 1px solid #cbde8c;
                     a{

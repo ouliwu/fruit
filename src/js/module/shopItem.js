@@ -1,4 +1,4 @@
-define(["jquery","template"],($,template)=>{
+define(["jquery","template","addCart"],($,template,addCart)=>{
     function ShopItem(container,url,listData){//根据不同的地址渲染不同的接口
         //加载过来的容器盒子
         this.container = container;
@@ -12,10 +12,11 @@ define(["jquery","template"],($,template)=>{
             
             //加载页面
             this.container.load("/html/module/shopItem.html",()=>{
-            this.getData();
+            
             //判断listData是否存在      
             if(this.listData){
                 this.render(this.listData);
+                
             }else{
                 this.getData();
             }   
@@ -35,6 +36,7 @@ define(["jquery","template"],($,template)=>{
             //渲染列表数据
             //让渲染好的页面覆盖script
            this.container.html(template("shop-list",{list:data}));
+        //    console.log()/
            
         }
     })

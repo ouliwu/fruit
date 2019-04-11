@@ -1,17 +1,21 @@
 define(["jquery"],function($){
     class Header{
         constructor(){
+          
             this.init().then(()=>{
                 this.search();
+                this.calcCartNum();
             });
+           
         }
         init() {
+            
             return new Promise(function(resolve,reject){
                 $("#header-container").load("/html/module/header.html",() =>{
+                    // this.calcCartNum();//加载结束之后调用
                     resolve();
                 });
             })
-   
         }
         search(){
             this.textfield = $("#textfield");
@@ -48,6 +52,21 @@ define(["jquery"],function($){
             })
            
         }
+
+        calcCartNum(){
+            let cart = JSON.parse(localStorage.getItem("cart"));
+            // console.log(cart);
+            if(cart){
+                this.num = cart.reduce(function(num,prod){
+                    num+=Number(prod.num);
+                    return num;
+                },0)
+                console.log(this.num);
+                $(".cartNum").html(this.num);
+            }
+            
+        }
+        
 
     }
     return new Header();

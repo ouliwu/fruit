@@ -1,5 +1,5 @@
 require(["require.config"],function(){
-    require(["jquery","header","url","template","shopItem","Swiper","footer"],function($,header,url,template,ShopItem,Swiper){
+    require(["jquery","header","url","template","shopItem","Swiper","addCart","footer"],function($,header,url,template,ShopItem,Swiper,addCart){
         
         class Index{    
                 constructor(){
@@ -25,9 +25,17 @@ require(["require.config"],function(){
            }
            caty(){
                //请求分类数据
-               new ShopItem($(".clo_4"),url.baseUrl+"/caty");
-               new ShopItem($(".clo_5"),url.baseUrl+"/caty");
+               new ShopItem($(".clo_4"),url.baseUrl+"/caty")
+               setTimeout(function(){
+                
+                addCart($(".midd"), ".cart_btn","",true);
+                
+                },500);
+              //  new ShopItem($(".clo_5"),url.baseUrl+"/caty");
                
+                
+                
+              
             //    $.ajax({
             //     url:url.baseUrl+"/caty",
             //     method:"GET",
@@ -46,6 +54,8 @@ require(["require.config"],function(){
             //    })
                 
            }
+           
+
         }
         return new Index();
     })

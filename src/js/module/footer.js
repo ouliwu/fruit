@@ -7,7 +7,6 @@ define(["jquery"],function($){
             return new Promise(function(resolve,reject){
                 $("#footer-container").load("/html/module/footer.html",() =>{
                     resolve();
-                    console.log(222);
                 });
             })
                 

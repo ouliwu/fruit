@@ -40,7 +40,16 @@
                 </table>
                 <table id="count"> 
                     <tbody>
-                        
+                        <tr>
+                            <td>
+                                <p>购物金额小计￥<span class="total"></span></p><br/>
+                                比市场价￥<span class="originPrice"></span> 节省了￥<span class="discount"></span>
+                            </td>
+                            <td align="right">
+                                <input type="button" value="清空购物车" class="btn white">
+                                <input type="submit" value="更新购物车" class="btn red">
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </form>
@@ -52,40 +61,29 @@
     </section>
     <div id="footer-container"></div>
     <script type="text/html" id="list-template">
+        {{each cart prod}}
         <tr>
                 <td width="35%">
                     <p class="cart-goods">
                         <a href="javascript:;" target="_blank">
-                            <img src="{{img}}" border="0"/>
+                            <img src="{{prod.img}}"/>
                         </a>
-                        <a href="goods.php?id=160" target="_blank" class="f6">{{title}}</a>
+                        <a href="goods.php?id=160" target="_blank" class="f6">{{prod.title}}</a>
                     </p>
                 </td>
-                <td align="center"><del>¥{{orginPrice}}</del></td>
-                <td align="center">¥<span id="price">{{price}}</span></td>
+                <td align="center"><del class="orginPrice">¥{{prod.orginPrice}}</del></td>
+                <td align="center">¥<span class="price">{{prod.price}}</span></td>
                 <td align="center">
                     <div class="quantity">
                         <input type="button" value="-" class="minus">
-                        <input type="text" id="goods-num" value="1" class="cart-quantity">
+                        <input type="text" id="goods-num" value="{{prod.num}}" class="cart-quantity">
                         <input type="button" value="+" class="plus">
                     </div>
                 </td>
-                <td align="center">¥{{price}}</td>
-                <td align="center"><a href="javascript:;" style="color:red;" id="del">删除</a></td>
+                <td align="center">¥<span class="sum">0</span></td>
+                <td align="center"><a href="javascript:;" style="color:red;" class="del" data-id="{{prod.id}}">删除</a></td>
             </tr>
-            
-    </script>
-    <script type="text/html" id="list-count">
-        <tr>
-            <td>
-                <p>购物金额小计<span class="total"></span></p><br/>
-                比市场价<del>￥{{orginPrice}}</del> 节省了{{orginPrice}}-{{price}} (17%)
-            </td>
-            <td align="right">
-                <input type="button" value="清空购物车" class="btn white">
-                <input type="submit" value="更新购物车" class="btn red">
-            </td>
-        </tr>
+        {{/each}}   
     </script>
     <script type="text/javascript" src="/libs/requirejs/require.js" data-main="/js/cart.js"></script>  
 

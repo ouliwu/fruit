@@ -5,6 +5,12 @@
 .menu{
     display: none;
 }
+#cat:hover{
+   
+    .menu{
+        display: block;
+    }
+}
 .midd{
     overflow: hidden;
     margin: 0 auto;
