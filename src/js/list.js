@@ -6,10 +6,12 @@ require(["require.config"],function(){
                 this.prcieAD();
                 this.toCart();
                 this.i = 1;
+                this.value();
             }
           
             caty(){
                 //请求分类数据
+                
                 new Promise(resolve=>{
                     $.get(url.baseUrl+"list/get",res=>{
                         if(res.res_code===1){
@@ -19,6 +21,7 @@ require(["require.config"],function(){
                         }
                     })
                 }).then(list=>{
+                    $(".view").html("进口鲜果");
                     new shopItem($(".clo_12"),"",list);
                     this.page();   
                     this.updown();
@@ -136,6 +139,32 @@ require(["require.config"],function(){
                     list = this.list.slice(12*this.i++,this.list.length);
                 }
                 new shopItem($(".clo_12"),"",list);
+                })
+            }
+            value(){
+                $(".jk").on("click",function(){
+                    $(".view").html($(this).html());
+                })
+
+                $(".gc").on("click",function(){
+                    $(".view").html($(this).html());
+                })
+
+                $(".gh").on("click",function(){
+                    $(".view").html($(this).html());
+                })
+
+                $(".jg").on("click",function(){
+                    $(".view").html($(this).html());
+                })
+                $(".qy").on("click",function(){
+                    $(".view").html($(this).html());
+                })
+                $(".jf").on("click",function(){
+                    $(".view").html($(this).html());
+                })
+                $(".th").on("click",function(){
+                    $(".view").html($(this).html());
                 })
             }
         }

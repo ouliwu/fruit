@@ -9,9 +9,11 @@ body{
 .menu{
     display: none;
 }
+
 #cat:hover{
    
     .menu{
+        height:auto !important;
         display: block;
     }
 }

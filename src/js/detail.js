@@ -11,6 +11,7 @@ require(["require.config"],function(){
                 
             }
             init(){
+                this.value();
                this.id = location.search.slice(4);
                //带着id请求详情页数据
                let small = "";
@@ -49,6 +50,7 @@ require(["require.config"],function(){
                              num : 1
                          }
                     }
+                    $(".view").html("进口鲜果");
                     var html = template("list-template",{...str});
                 
                     
@@ -120,6 +122,33 @@ require(["require.config"],function(){
             toCart () {
                 addCart($(".goods_info"), ".cart_btn", this.detail);
               }
+              value(){
+                $(".jk").on("click",function(){
+                    $(".view").html($(this).html());
+                })
+
+                $(".gc").on("click",function(){
+                    $(".view").html($(this).html());
+                })
+
+                $(".gh").on("click",function(){
+                    $(".view").html($(this).html());
+                })
+
+                $(".jg").on("click",function(){
+                    $(".view").html($(this).html());
+                })
+                $(".qy").on("click",function(){
+                    $(".view").html($(this).html());
+                })
+                $(".jf").on("click",function(){
+                    $(".view").html($(this).html());
+                })
+                $(".th").on("click",function(){
+                    $(".view").html($(this).html());
+                })
+                location.href="/html/list.html";
+            }
 
         }
            

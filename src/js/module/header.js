@@ -4,12 +4,12 @@ define(["jquery"],function($){
           
             this.init().then(()=>{
                 this.search();
+                this.ref();
                 this.calcCartNum();
             });
            
         }
         init() {
-            
             return new Promise(function(resolve,reject){
                 $("#header-container").load("/html/module/header.html",() =>{
                     // this.calcCartNum();//加载结束之后调用
@@ -66,7 +66,16 @@ define(["jquery"],function($){
             }
             
         }
-        
+        ref(){
+            $(".jk").on("click",function(){
+                location.href="/html/list.html";
+            })
+            $(".gc").on("click",function(){
+                console.log(this);  
+                // location.href="/html/list.html";
+                $(".view").html($(".gc").html());
+            })
+        }
 
     }
     return new Header();

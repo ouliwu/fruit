@@ -4,6 +4,13 @@
 .menu{
     display: none;
 }
+#cat:hover{
+   
+    .menu{
+        height:auto !important;
+        display: block;
+    }
+}
 .center{
     .clear{
         clear: both;
