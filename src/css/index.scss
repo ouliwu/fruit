@@ -2,6 +2,10 @@
 @import "module/header";
 @import "module/footer";
 @import "module/shopItem";
+body{
+    width:100%;
+    background:#f4f4f4;
+}
 .midd{
     overflow: hidden;
     width:85%;

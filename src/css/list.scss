@@ -2,6 +2,10 @@
 @import "module/header";
 @import "module/footer";
 @import "module/shopItem";
+body{
+    width:100%;
+    background:#f4f4f4;
+}
 .menu{
     display: none;
 }
@@ -46,7 +50,39 @@
             display: inline-block;
             border:1px solid #ccc;
         }
-       
+        .fr{
+            float:right;
+            .page{
+                display: block;
+                color:#ddd;
+                line-height:24px;
+            }
+            a{
+                background:#fff;
+                color:#333;
+                padding:0 10px;
+                font-size:18px;
+                line-height:24px;
+                border:1px solid #ccc;
+                span{
+                    color:#DF4E4F;
+                }
+            }
+        }
 
+    }
+    .page_nav{
+        float:right;
+        a{
+            background:#fff;
+            color:#333;
+            padding:0 10px;
+            font-size:14px;
+            line-height:24px;
+            border:1px solid #ccc;
+            span{
+                color:#DF4E4F;
+            }
+        }
     }
 }

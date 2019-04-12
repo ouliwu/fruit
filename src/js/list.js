@@ -5,14 +5,28 @@ require(["require.config"],function(){
                 this.caty();
                 this.prcieAD();
                 this.toCart();
+                this.i = 1;
             }
           
             caty(){
                 //请求分类数据
-                new shopItem($(".clo_12"),url.baseUrl+"/list/get");
-                
+                new Promise(resolve=>{
+                    $.get(url.baseUrl+"list/get",res=>{
+                        if(res.res_code===1){
+                            this.list = res.res_body.data.list;
+                            
+                        resolve(this.list.slice(0,12));
+                        }
+                    })
+                }).then(list=>{
+                    new shopItem($(".clo_12"),"",list);
+                    this.page();   
+                    this.updown();
+                })
                  
             }
+            
+            //按价格排序
             prcieAD(){
                 var index = 1;
                 $("#priceAD").on("click",function(){
@@ -44,12 +58,85 @@ require(["require.config"],function(){
                             
                             
                         }
+                        //请求数据渲染模板
                         new shopItem($(".clo_12"),"",list);
                     })
                 })
             }
+            //加入购物车
             toCart(){
                 addCart($(".cart_goods"),".cart_btn","",true);
+            }
+
+            //分页
+            page(){
+                this.index();
+                let list;
+                //下一页
+                $(".next").on("click",()=>{
+                    $(".next").css({"display":"inline-block"});
+                    //this.i = 1  
+                    if(this.list.length >= 12*(this.i+1)){
+                        
+                    list = this.list.slice(12*this.i,12*(++this.i));
+                    
+                    this.index();
+                }else{
+                    $(".next").css({"display":"none"});
+                    list = this.list.slice(12*this.i++,this.list.length);
+                }
+                new shopItem($(".clo_12"),"",list);
+                })
+                //上一页
+                $(".prev").on("click",()=>{
+                    $(".next").css({"display":"inline-block"});
+                    list = this.list.slice(12*(this.i-2),12*(--this.i));
+
+                    this.index();
+                    console.log(list,this.i);
+                    new shopItem($(".clo_12"),"",list);  
+                })
+                   
+            }
+            //显示隐藏上一页
+            index(){
+                if(this.i == 1){
+                    $(".prev").css({"display":"none"});
+                }else{
+                    console.log(this.i);
+                    $(".prev").css({"display":"inline-block"});
+                }
+            }
+
+            updown(){
+                let list;
+                $("#up").on("click",()=>{
+                    this.page();
+                    $(".next").css({"display":"inline-block"});
+                    if(this.i=2){
+                        $("#up").css({"dosplay":"none"});
+                    }
+                    list = this.list.slice(12*(this.i-2),12*(--this.i));
+                 
+                    console.log(list,this.i);
+                    
+                    new shopItem($(".clo_12"),"",list);  
+                    
+                })
+                $("#down").on("click",()=>{
+                    $(".next").css({"display":"inline-block"}); 
+                    if(this.list.length >= 12*(this.i+1)){          
+                    list = this.list.slice(12*this.i,12*(++this.i));
+                    this.index();
+                }else{
+                    $(".next").css({"display":"none"});
+                    if(this.i=2){
+                        $("#down").css({"dosplay":"none"});
+                    }
+                    list = this.list.slice(12*this.i++,this.list.length);
+                }
+                new shopItem($(".clo_12"),"",list);
+                })
             }
         }
         new List();

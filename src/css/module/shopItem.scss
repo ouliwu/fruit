@@ -12,8 +12,9 @@
     }
     
     .clo_4,.clo_12{
-       
+        font-size:16px;
         margin:0 auto;
+        margin-left:-2%;
         .text{
             line-height:18px;
             font-weight: bold;
@@ -21,19 +22,23 @@
             margin-bottom: 10px;
         }
         .price{
-            color:red;
+            color:#DF4E4F;
             font-weight: bold;
-            font-size: 17px;
+            font-size: 18px;
         }
         .orginPrice{
             font-size:12px;
             color:#999;
             text-decoration: line-through;
         }
+        .o{
+            font-size:12px;
+        }
         li{
             width:23%;
             height:293px;
             float:left;
+            margin-bottom:20px;
             margin-left: 2%;
             position:relative;
             padding-bottom:80px;
@@ -41,13 +46,18 @@
             background:#fff;
             list-style: none;
             img{
+                margin-left:0;
                 width:100%;
                 margin-bottom: 10px;
             }
+            p{
+                margin:0 10px;
+            }
             .action{
                 position: absolute;
-                bottom:20px;
+                right:0;
                 padding:0 10px;
+                bottom:20px;
                 box-sizing: border-box;
                 width:100%;
                 em{
@@ -65,6 +75,10 @@
                     padding:0 2px;
                     display: inline-block;
                 }
+            }
+            .b{
+                color:#DF4E4F;
+                font-weight: bold;
             }
             span{
                 color:#999;

@@ -1,7 +1,8 @@
 footer {
-    
     margin:20px 0 0 0;
     .slogen{
+        font-size:18px;
+        font-weight:700;
         margin:20px 0;
         text-align: center;
         background: #e4e4e4;
@@ -20,6 +21,7 @@ footer {
         min-width: 1024px;
         max-width: 1440px;
         .help{
+            font-size:14px;
             overflow: hidden;
             bottom:1px solid #ddd;
             padding: 0 0 20px 0;
@@ -56,6 +58,7 @@ footer {
             }
         }
         div{
+            font-size:14px;
             p{
                 margin:15px 0;
                 a{
