@@ -75,6 +75,10 @@ require(["require.config"],function(){
                     _this.setLocalstorage(id,i);
                     _this.origin();
                 })
+                //清空购物车
+                $(".white").on("click",function(){
+                    localStorage.removeItem("cart");
+                })
             }
 
 
@@ -121,6 +125,8 @@ require(["require.config"],function(){
                
             }
 
+           
+           
         }
       
         new Cart();

@@ -70,11 +70,10 @@ define(["jquery"],function($){
             $(".jk").on("click",function(){
                 location.href="/html/list.html";
             })
-            $(".gc").on("click",function(){
-                console.log(this);  
-                // location.href="/html/list.html";
-                $(".view").html($(".gc").html());
-            })
+            // $(".h").on("click",function(){
+            //     location.href="/html/list.html";
+            //     $(".view").html($(".gc").html());
+            // })
         }
 
     }

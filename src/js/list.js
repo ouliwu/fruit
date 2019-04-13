@@ -148,6 +148,7 @@ require(["require.config"],function(){
 
                 $(".gc").on("click",function(){
                     $(".view").html($(this).html());
+                    new shopItem($(".clo_12"),"",list);  
                 })
 
                 $(".gh").on("click",function(){

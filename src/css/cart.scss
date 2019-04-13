@@ -20,12 +20,14 @@
     }
     .step{
         a{
+            margin-right:20px;
             color:#333;
         }
         overflow: hidden;
         white-space: nowrap;
         padding: 0 0 10px 0;
         .on{
+            padding:10px 25px 10px 25px;
             color: #fff;
             background: #efac0b;
         }
@@ -93,6 +95,7 @@
                 display: inline-block;
             }
             .white{
+                cursor: pointer;
                 color:#333;
                 background:#fff;
             }
